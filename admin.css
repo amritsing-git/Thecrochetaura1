@@ -1,0 +1,6 @@
+.admin-page{background:#fffdf8}
+.admin-brand{font:700 20px 'Playfair Display';margin-bottom:20px}
+.admin-main h1{font:600 30px 'Playfair Display'}
+.admin-main .sub{color:var(--muted)}
+.admin-main section{scroll-margin-top:20px}
+.admin-actions{display:flex;gap:10px;flex-wrap:wrap}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Custom Orders | The Crochet Aura</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="announcement">Let's make something special ♡</div>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/logo.png">The Crochet Aura</a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="custom-orders.html">Custom Orders</a><a href="contact.html">Contact</a></nav>
+<a class="iconbtn" href="cart.html">♡</a>
+</div></header>
+<section class="page-hero"><h1 class="page-title">Your Idea, Our Creation</h1><p>Tell us what you want to get handmade.</p></section>
+<main class="container content"><div class="two-col">
+<form class="panel" id="customForm">
+<h2>Customization Request</h2>
+<div class="field"><label>Your Name</label><input id="cname" required></div>
+<div class="field"><label>Email</label><input id="cemail" type="email" required></div>
+<div class="field"><label>What do you want?</label>
+<select id="ckind"><option>Crochet Bouquet</option><option>Flowers</option><option>Plushie</option><option>Gift</option><option>Other</option></select></div>
+<div class="field"><label>Preferred Colour</label><input id="ccolor"></div>
+<div class="field"><label>Approx Budget</label><input id="cbudget" placeholder="₹"></div>
+<div class="field"><label>Describe your idea</label><textarea id="cdetails" required></textarea></div>
+<button type="submit">Submit Request ♡</button>
+</form>
+<div class="panel"><h2>Prefer Instagram?</h2><p class="muted">Discuss your custom design directly with us on Instagram.</p>
+<a class="btn secondary" href="https://instagram.com/thecrochetaura" target="_blank">Chat on Instagram ↗</a>
+<div class="notice">You can also submit your idea through the form. Our team can review it from the admin panel once the backend is connected.</div>
+</div>
+</div></main>
+<script src="app.js"></script>
+</body></html>

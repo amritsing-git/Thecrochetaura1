@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Profile | The Crochet Aura</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/logo.png">The Crochet Aura</a>
+<nav class="navlinks"><a href="shop.html">Shop</a><a href="cart.html">Cart</a><a href="my-orders.html">Orders</a></nav>
+</div></header>
+<section class="page-hero"><h1 class="page-title">My Account ♡</h1><p>Your personal space.</p></section>
+<main class="container content"><div class="two-col">
+<div>
+<div class="panel">
+<div class="profile-head">
+<div class="avatar">♡</div>
+<div><h2 id="profileName">Customer</h2><p id="profileEmail"></p><p id="profilePhone"></p></div>
+</div>
+<button class="outline" onclick="document.querySelector('#editProfile').classList.toggle('hidden')">Edit Profile</button>
+<form id="profileForm" class="hidden" style="margin-top:20px">
+<div class="field"><label>Name</label><input id="editName" required></div>
+<div class="field"><label>Phone</label><input id="editPhone"></div>
+<button type="submit">Save Changes</button>
+</form>
+</div>
+<div class="panel" style="margin-top:18px">
+<h2>My Shortcuts</h2>
+<p><a href="my-orders.html">📦 My Orders</a></p>
+<p><a href="cart.html">🛒 My Cart</a></p>
+<p><a href="wishlist.html">♡ Wishlist</a></p>
+<button class="outline" data-logout>Logout</button>
+</div>
+</div>
+<div class="panel">
+<h2>Recent Orders</h2>
+<div id="accountOrders">Loading...</div>
+<a href="my-orders.html">View All Orders →</a>
+</div>
+</div></main>
+<script src="app.js"></script>
+<script>
+if(!localStorage.getItem('currentUser'))location.href='login.html';
+const u=JSON.parse(localStorage.getItem('currentUser')||'{}');
+document.querySelector('#editName').value=u.name||'';
+document.querySelector('#editPhone').value=u.phone||'';
+</script>
+</body></html>

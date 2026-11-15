@@ -1,0 +1,10 @@
+{
+  "name": "The Crochet Aura",
+  "short_name": "Crochet Aura",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff8e9",
+  "theme_color": "#fff8e9",
+  "description": "Handmade crochet and embroidery gifts",
+  "icons": []
+}

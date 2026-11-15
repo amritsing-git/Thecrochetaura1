@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout | The Crochet Aura</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/logo.png">The Crochet Aura</a>
+<a href="cart.html">← Back to Cart</a>
+</div></header>
+<section class="page-hero"><h1 class="page-title">Checkout ♡</h1><p>Complete your delivery details.</p></section>
+<main class="container content" style="max-width:650px">
+<form class="panel" id="checkoutForm">
+<h2>Delivery Information</h2>
+<div class="field"><label>Full Name</label><input id="shipName" required></div>
+<div class="field"><label>Phone Number</label><input id="shipPhone" type="tel" required></div>
+<div class="field"><label>Complete Address</label><textarea id="shipAddress" required placeholder="House number, street, city, state, PIN code"></textarea></div>
+<div class="notice">Your order will first show as Order Successfully Placed. The shop admin will confirm it before it shows as confirmed.</div>
+<button type="submit">Place Order ♡</button>
+</form>
+</main>
+<script src="app.js"></script>
+<script>
+if(!localStorage.getItem('currentUser'))location.href='login.html';
+const u=JSON.parse(localStorage.getItem('currentUser')||'{}');
+document.querySelector('#shipName').value=u.name||'';
+document.querySelector('#shipPhone').value=u.phone||'';
+</script>
+</body></html>

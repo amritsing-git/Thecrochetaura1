@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Panel | The Crochet Aura</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+
+<div id="adminLoginWrap" class="container content" style="max-width:450px">
+<form id="adminLogin" class="panel">
+<div class="brand"><img src="assets/logo.png">The Crochet Aura</div>
+<h1>Admin Login</h1>
+<p class="muted">Welcome to your store dashboard.</p>
+<div class="field"><label>Admin Password</label><input id="adminPassword" type="password" required></div>
+<button type="submit">Login to Dashboard</button>
+<p class="muted">Demo password: crochetaura123</p>
+<a href="index.html">← Back to Website</a>
+</form>
+</div>
+
+<div id="adminApp" class="hidden">
+<div class="admin-layout">
+<aside class="sidebar">
+<div class="admin-brand">🧶 The Crochet Aura</div>
+<a href="#overview">Overview</a>
+<a href="#products">Products</a>
+<a href="#orders">Customer Orders</a>
+<a href="#custom">Custom Requests</a>
+<a href="index.html">View Website ↗</a>
+</aside>
+
+<main class="admin-main">
+<div class="row"><div><h1>Dashboard</h1><p class="sub">Manage your handmade store.</p></div><span class="pill">ADMIN</span></div>
+
+<section id="overview">
+<div class="stat-grid">
+<div class="stat">Products<strong id="statProducts">0</strong></div>
+<div class="stat">Orders<strong id="statOrders">0</strong></div>
+<div class="stat">Custom Requests<strong id="statRequests">0</strong></div>
+</div>
+</section>
+
+<section id="products" class="panel" style="margin-top:22px">
+<div class="row"><h2>Manage Products</h2><a class="btn" href="#addProduct">+ Add Product</a></div>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Action</th></tr></thead>
+<tbody id="adminProducts"></tbody>
+</table></div>
+
+<div id="addProduct" style="border-top:1px solid var(--line);margin-top:25px;padding-top:20px">
+<h2>Add New Product</h2>
+<form id="productForm">
+<div class="field">
+<label>Product Photos (Maximum 3)</label>
+<div class="upload-grid" id="imagePreview">
+<label class="upload-tile" for="productPhotos">
+<span style="font-size:35px">＋</span><small>Add Photo</small>
+</label>
+</div>
+<input type="file" id="productPhotos" accept="image/*" multiple hidden>
+</div>
+<div class="form-grid">
+<div class="field"><label>Product Name</label><input id="pname" required></div>
+<div class="field"><label>Price ₹</label><input id="pprice" type="number" min="1" required></div>
+<div class="field"><label>Category</label>
+<select id="pcategory">
+<option>Crochet Bouquets</option><option>Flowers</option>
+<option>Gifts</option><option>Plushies</option><option>Accessories</option>
+</select></div>
+<div class="field"><label>Stock</label><input id="pstock" type="number" min="0" value="1"></div>
+<div class="field wide"><label>Description</label><textarea id="pdesc"></textarea></div>
+</div>
+<button type="submit">Save Product ♡</button>
+</form>
+</div>
+</section>
+
+<section id="orders" class="panel" style="margin-top:22px">
+<h2>Customer Orders</h2>
+<p class="muted">Confirm an order here, then update its shipping status.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Order</th><th>Customer</th><th>Total</th><th>Current Status</th><th>Update</th></tr></thead>
+<tbody id="adminOrders"></tbody>
+</table></div>
+</section>
+
+<section id="custom" class="panel" style="margin-top:22px">
+<h2>Customization Requests</h2>
+<div id="adminRequests"></div>
+</section>
+
+</main>
+</div>
+</div>
+<script src="admin.js"></script>
+</body></html>
